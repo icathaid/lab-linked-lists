@@ -1,0 +1,19 @@
+{
+  "name": "lab-linked-lists",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure ================================================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icathaid/lab-linked-lists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icathaid/lab-linked-lists/issues"
+  },
+  "homepage": "https://github.com/icathaid/lab-linked-lists#readme"
+}
