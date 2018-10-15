@@ -20,17 +20,13 @@ class List {
     }
     current.next = node;
     return this;
-
+  }
+  prepend(val){
+    let holdThis = this.head;
+    let node = new Node(val);
+    this.head = node;
+    this.head.next = holdThis;
   }
 }
 
-// module.exports = List;
-
-const bill = new List;
-bill.append(4);
-
-console.log(bill);
-bill.append(3);
-console.log(bill);
-bill.append(2);
-console.log(bill);
+module.exports = List;

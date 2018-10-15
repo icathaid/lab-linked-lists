@@ -9,7 +9,7 @@
 
 
 ## Requirements
-* implement a Singly Linked List (SLL) data structure
+[x] * implement a Singly Linked List (SLL) data structure
 * implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
 * implement `serialize()` and `deserialize()` methods on the class
 * in a comment within each function, note the it's Big-O runtime
