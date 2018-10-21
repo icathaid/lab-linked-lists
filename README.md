@@ -30,3 +30,10 @@
     * installing and using your data structure
     * accessing each method
     * running your tests
+
+
+
+
+# Resources:
+
+https://www.geeksforgeeks.org/reverse-a-linked-list/
