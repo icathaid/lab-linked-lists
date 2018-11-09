@@ -1,3 +1,10 @@
+#  Notes
+
+I couldn't get the !typeof(val)===Number validation to work for the input, so I defined a variable as the input value divided by zero and checked if that variable was undefined.  There are probably some weird edge cases with NaN, null, undefined that will break this but I haven't tested them yet.
+
+
+
+
 ![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
 ================================================================
 

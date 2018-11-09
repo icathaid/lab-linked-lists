@@ -10,6 +10,10 @@ class List {
 
   append(val) {
     let node = new Node(val);
+    let verify = val/0;
+    if(!verify){
+      return 'Error:  Input must be a number';
+    }
     if (!this.head) {
       this.head = node;
       return this;
@@ -60,16 +64,4 @@ class List {
 
 
 
-// module.exports = List;
-
-
-const bill = new List;
-
-bill.append(1).append(3).append(8).append(2);
-console.log(bill);
-
-// console.log('2 from end should be 3', bill.kthFromEnd(2));
-// console.log('1 from end should be 8', bill.kthFromEnd(1));
-// console.log('0 from end should return 2', bill.kthFromEnd(0));
-
-console.log('too large an input should return -1', bill.kthFromEnd(8));
+module.exports = List;
