@@ -30,6 +30,7 @@ class List {
     let node = new Node(val);
     this.head = node;
     this.head.next = holdThis;
+    return this;
   }
   insertBefore(val, newVal){
     let current = this.head;
