@@ -74,3 +74,11 @@ describe('SLL remove(offset) Method', () => {
     expect(actual.head.next.value).toEqual(2);
   });
 });
+
+describe('SLL serialize/deserialize module', () => {
+  it('should create an array with the results of an in-order traversal', () => {
+    let seahawks = new List;
+    seahawks.append(1).append(2).append(3);
+    expect(seahawks.serialize()).toEqual([1,2,3,null]); 
+  });
+});

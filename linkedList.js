@@ -75,8 +75,37 @@ class List {
     }
     return current.value;
   }
+  serialize(){
+    let results = [];
+    let current = this.head;
+    while(current.next){
+      results.push(current.value);
+      current = current.next;
+    }
+    results.push(current.value);
+    results.push(null);
+    return results;
+  }
+  deserialize(){
+    
+  }
 }
 
 
 
+let bill = new List;
+bill.append(1).append(2).append(3);
+console.log(bill.serialize());
+
+
+
+
+
+
+
+
+
+
+
 module.exports = List;
+
