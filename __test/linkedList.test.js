@@ -50,3 +50,27 @@ describe('SLL prepend method', () => {
     expect(raiders.head.next.next.value).toEqual(5);
   });
 });
+
+describe('SLL remove(offset) Method', () => {
+  it('should remove the given node in a linked list and return the ammended list', () => {
+    let packers = new List;
+    packers.append(1).append(2).append(3);
+    let actual = packers.remove(2);
+    expect(actual.head.value).toEqual(1);
+    expect(actual.head.next.value).toEqual(3);
+  });
+  it('should work on the beginning of a linked list', () => {
+    let bills = new List;
+    bills.append(1).append(2).append(3);
+    let actual = bills.remove(1);
+    expect(actual.head.value).toEqual(2);
+    expect(actual.head.next.value).toEqual(3); 
+  });
+  it('should work on the end of a list', () => {
+    let vikings = new List;
+    vikings.append(1).append(2).append(3);
+    let actual = vikings.remove(3);
+    expect(actual.head.value).toEqual(1);
+    expect(actual.head.next.value).toEqual(2);
+  });
+});

@@ -43,7 +43,7 @@ class List {
     current.next.next = holdThis;
     return this;
   }
-  removeOffset(val){
+  remove(val){
     let current = this.head;
     let offset = 1;
     while(offset < val){
@@ -80,11 +80,3 @@ class List {
 
 
 module.exports = List;
-
-let bill = new List;
-
-bill.append(1).append(2).append(3).append(4);
-console.log(bill);
-
-bill.removeOffset(2);
-console.log(bill);
