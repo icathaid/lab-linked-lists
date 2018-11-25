@@ -41,6 +41,20 @@ class List {
     let node = new Node(newVal);
     current.next = node;
     current.next.next = holdThis;
+    return this;
+  }
+  removeOffset(val){
+    let current = this.head;
+    let offset = 1;
+    while(offset < val){
+      offset +=1;
+      current = current.next;
+    }
+    while(current.next){
+      current.value = current.next.value;
+      current = current.next;
+    }
+    return this;
   }
   kthFromEnd(k){
     if(!this.head){
@@ -66,3 +80,11 @@ class List {
 
 
 module.exports = List;
+
+let bill = new List;
+
+bill.append(1).append(2).append(3).append(4);
+console.log(bill);
+
+bill.removeOffset(2);
+console.log(bill);
