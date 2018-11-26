@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint \"**/*.js\"",
-    "test": "jest /test/tree.test.js --coverage --verbose"
+    "test": "jest /__test/linkedList.test.js --coverage --verbose"
   },
   "repository": {
     "type": "git",
