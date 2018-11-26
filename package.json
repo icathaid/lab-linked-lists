@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint \"**/*.js\"",
-    "test": "jest /test/stacks-and-queues.test.js --coverage --verbose"
+    "test": "jest /test/tree.test.js --coverage --verbose"
   },
   "repository": {
     "type": "git",
