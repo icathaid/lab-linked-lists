@@ -76,28 +76,6 @@ class DoubleList {
   }
 }
 
-// serialize(){
-//     let results = [];
-//     let current = this.head;
-//     while(current.next){
-//       results.push(current.value);
-//       current = current.next;
-//     }
-//     results.push(current.value);
-//     results.push(null);
-//     return results;
-//   }
-//   deserialize(arr){
-//     for(let i = 0; i < arr.length; i++){
-//       this.append(arr[i]);
-//     }
-//     return this;
-//   }
-
-
-
-
-
 class List {
 
   constructor() {
@@ -190,17 +168,13 @@ class List {
   }
 }
 
-
-
-
-
-
-
-
-
-
 module.exports = List, DoubleList;
 
-let bill = new DoubleList;
-bill.append(1).append(2).append(3);
-console.log(bill.head.next.prev.value);
+
+let testList = new DoubleList;
+
+testList.append(1).append(2).append(3);
+console.log('testList.head.value:   ', testList.head.value);
+console.log('testList.head.prev:    ', testList.head.prev);
+console.log('testList.head.next.value:     ', testList.head.next.value);
+console.log('testList.head.next.prev.value:     ', testList.head.next.prev.value);
