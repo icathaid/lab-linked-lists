@@ -16,10 +16,16 @@ I couldn't get the !typeof(val)===Number validation to work for the input, so I 
 
 
 ## Requirements
-[x] * implement a Singly Linked List (SLL) data structure
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
-* implement `serialize()` and `deserialize()` methods on the class
-* in a comment within each function, note the it's Big-O runtime
+[x] implement a Singly Linked List (SLL) data structure
+[x] implement `append(value)`
+[x]`prepend(value)`
+[]  `reverse()`
+[x] `remove(offset)` methods to the SLL class
+[x]  implement `serialize()` and `deserialize()` methods on the class
+
+[]  in a comment within each function, note the it's Big-O runtime
+
+
 
 * implement a Doubly Linked List (DLL) data structure
 * implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
@@ -44,3 +50,5 @@ I couldn't get the !typeof(val)===Number validation to work for the input, so I 
 # Resources:
 
 https://www.geeksforgeeks.org/reverse-a-linked-list/
+
+https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/

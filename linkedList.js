@@ -43,7 +43,7 @@ class List {
     current.next.next = holdThis;
     return this;
   }
-  removeOffset(val){
+  remove(val){
     let current = this.head;
     let offset = 1;
     while(offset < val){
@@ -75,16 +75,38 @@ class List {
     }
     return current.value;
   }
+  serialize(){
+    let results = [];
+    let current = this.head;
+    while(current.next){
+      results.push(current.value);
+      current = current.next;
+    }
+    results.push(current.value);
+    results.push(null);
+    return results;
+  }
+  deserialize(arr){
+    for(let i = 0; i < arr.length; i++){
+      this.append(arr[i]);
+    }
+    return this;
+  }
 }
+
+
+let bill = new List;
+
+let ted = [1,2,3,null];
+bill.deserialize(ted);
+console.log(bill);
+
+
+
+
+
 
 
 
 module.exports = List;
 
-let bill = new List;
-
-bill.append(1).append(2).append(3).append(4);
-console.log(bill);
-
-bill.removeOffset(2);
-console.log(bill);
