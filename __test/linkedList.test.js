@@ -1,6 +1,8 @@
 'use strict';
 
 const List = require('../linkedList.js');
+const DoubleList = require('../linkedList.js');
+
 
 describe('SLL append method', () => {
   it('should insert its input value as the last node', () => {
@@ -87,5 +89,21 @@ describe('SLL serialize/deserialize module', () => {
     expect(actual.head.next.value).toEqual(2);
     expect(actual.head.next.next.value).toEqual(3);
     expect(actual.head.next.next.next).toBe(null);
+  });
+});
+
+describe('DLL append module', () => {
+  it('should insert its input value as the last node', () => {
+    let brewers = new DoubleList;
+    expect(brewers.head).toBe(null);
+    brewers.append(1);
+    expect(brewers.head.value).toEqual(1);
+    expect(brewers.head.prev).toBe(null);
+  });
+  xit('should maintain correct prev pointers', () => {
+    let twins = new DoubleList;
+    twins.append(1).append(2).append(3);
+    expect(twins.head.prev).toBe(null);
+    expect(twins.head.next.prev.value).toEqual(1);
   });
 });

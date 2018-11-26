@@ -57,7 +57,44 @@ class DoubleList {
     }
     return this;
   }
+  serialize(){
+    let results = [];
+    let current = this.head;
+    while(current.next){
+      results.push(current.value);
+      current = current.next;
+    }
+    results.push(current.value);
+    results.push(null);
+    return results;
+  }
+  deserialize(arr){
+    for(let i = 0; i < arr.length; i++){
+      this.append(arr[i]);
+    }
+    return this;
+  }
 }
+
+// serialize(){
+//     let results = [];
+//     let current = this.head;
+//     while(current.next){
+//       results.push(current.value);
+//       current = current.next;
+//     }
+//     results.push(current.value);
+//     results.push(null);
+//     return results;
+//   }
+//   deserialize(arr){
+//     for(let i = 0; i < arr.length; i++){
+//       this.append(arr[i]);
+//     }
+//     return this;
+//   }
+
+
 
 
 
@@ -162,15 +199,8 @@ class List {
 
 
 
-module.exports = { List, DoubleList };
-
-
-
+module.exports = List, DoubleList;
 
 let bill = new DoubleList;
-
 bill.append(1).append(2).append(3);
-// console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-');
-bill.remove(1);
-console.log(bill);
-console.log('head next prev', bill.head.next.prev);
+console.log(bill.head.next.prev.value);

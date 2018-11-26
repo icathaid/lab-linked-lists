@@ -27,10 +27,15 @@ I couldn't get the !typeof(val)===Number validation to work for the input, so I 
 
 
 
-* implement a Doubly Linked List (DLL) data structure
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
-* implement `serialize()` and `deserialize()` methods on the class
-* in a comment within each function, note the it's Big-O runtime
+[x]  implement a Doubly Linked List (DLL) data structure
+[x]  implement `append(value)`
+[x]  `prepend(value)`
+[]   `reverse()`
+[x]  `remove(offset)` methods to the DLL class
+[x]  implement `serialize()`
+[x]  `deserialize()` methods on the class
+
+[]   in a comment within each function, note the it's Big-O runtime
 
 #### Testing
   * write at least three test assertions for each method of the Linked List Data Structure
