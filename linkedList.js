@@ -24,6 +24,7 @@ class DoubleList {
     current.next = node;
     current.next.prev = current;
     current = current.next;
+    return this;
   }
 
   prepend(val){
@@ -43,7 +44,22 @@ class DoubleList {
     this.head.prev = null;
     return this;
   }
+  remove(val){
+    let current = this.head;
+    let offset = 1;
+    while(offset < val){
+      offset +=1;
+      current = current.next;
+    }
+    while(current.next){
+      current.value = current.next.value;
+      current = current.next;
+    }
+    return this;
+  }
 }
+
+
 
 class List {
 
@@ -146,14 +162,15 @@ class List {
 
 
 
-module.exports = List;
+module.exports = { List, DoubleList };
 
-let bill = new DoubleList();
 
-bill.prepend(3);
 
-bill.prepend(2);
 
-bill.prepend(1);
-// console.log(bill);
-console.log(bill.head.next);
+let bill = new DoubleList;
+
+bill.append(1).append(2).append(3);
+// console.log('-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-');
+bill.remove(1);
+console.log(bill);
+console.log('head next prev', bill.head.next.prev);
