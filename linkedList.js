@@ -86,19 +86,20 @@ class List {
     results.push(null);
     return results;
   }
-  deserialize(){
-    
+  deserialize(arr){
+    for(let i = 0; i < arr.length; i++){
+      this.append(arr[i]);
+    }
+    return this;
   }
 }
 
 
-
 let bill = new List;
-bill.append(1).append(2).append(3);
-console.log(bill.serialize());
 
-
-
+let ted = [1,2,3,null];
+bill.deserialize(ted);
+console.log(bill);
 
 
 

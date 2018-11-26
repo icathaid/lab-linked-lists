@@ -7,11 +7,9 @@ describe('SLL append method', () => {
     let dolphins = new List;
     expect(dolphins.head).toBe(null);
     dolphins.append(1);
-    console.log(dolphins);
     expect(dolphins.head.value).toEqual(1);
     dolphins.append(2);
     expect(dolphins.head.next.value).toEqual(2);
-    console.log(dolphins);
   });
   it('should return a mocked error if given an invalid input', () => {
     let cowboys = new List;
@@ -80,5 +78,14 @@ describe('SLL serialize/deserialize module', () => {
     let seahawks = new List;
     seahawks.append(1).append(2).append(3);
     expect(seahawks.serialize()).toEqual([1,2,3,null]); 
+  });
+  it('should generate a new list from a given array', () => {
+    let bengals = new List;
+    let browns = [1,2,3,null];
+    let actual = bengals.deserialize(browns);
+    expect(actual.head.value).toEqual(1);
+    expect(actual.head.next.value).toEqual(2);
+    expect(actual.head.next.next.value).toEqual(3);
+    expect(actual.head.next.next.next).toBe(null);
   });
 });
