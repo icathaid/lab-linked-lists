@@ -4,7 +4,8 @@
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure ================================================================",
   "main": "index.js",
   "scripts": {
-    "test": "jest /__test/linkedList.test.js"
+    "lint": "eslint \"**/*.js\"",
+    "test": "jest /test/stacks-and-queues.test.js --coverage --verbose"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/icathaid/lab-linked-lists/issues"
   },
-  "homepage": "https://github.com/icathaid/lab-linked-lists#readme"
+  "homepage": "https://github.com/icathaid/lab-linked-lists#readme",
+  "dependencies": {
+    "eslint": "^5.9.0",
+    "express": "^4.16.4",
+    "jest": "^23.6.0"
+  }
 }
