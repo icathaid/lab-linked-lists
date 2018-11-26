@@ -69,26 +69,3 @@ https://www.geeksforgeeks.org/reverse-a-linked-list/
 
 had no idea what 'serialize' or 'deserialize' meant:
 https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/
-
-
-## Requirements
-[x] implement a Singly Linked List (SLL) data structure
-[x] implement `append(value)`
-[x]`prepend(value)`
-[]  `reverse()`
-[x] `remove(offset)` methods to the SLL class
-[x]  implement `serialize()` and `deserialize()` methods on the class
-
-[x]  in a comment within each function, note the it's Big-O runtime
-
-
-
-[x]  implement a Doubly Linked List (DLL) data structure
-[x]  implement `append(value)`
-[x]  `prepend(value)`
-[]   `reverse()`
-[x]  `remove(offset)` methods to the DLL class
-[x]  implement `serialize()`
-[x]  `deserialize()` methods on the class
-
-[x]   in a comment within each function, note the it's Big-O runtime
