@@ -49,6 +49,8 @@ I couldn't get the !typeof(val)===Number validation to work for the input, so I 
 
 # Resources:
 
+trying to figure out a way to reverse a linked list without making it doubly linked:
 https://www.geeksforgeeks.org/reverse-a-linked-list/
 
+had no idea what 'serialize' or 'deserialize' meant:
 https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/

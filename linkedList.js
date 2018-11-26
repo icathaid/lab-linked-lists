@@ -2,6 +2,49 @@
 
 const Node = require('./node.js');
 
+class DoubleList {  
+  constructor() {
+    this.head = null;
+  }
+
+  append(val){
+    let node = new Node(val);
+    let verify = val/0;
+    if(!verify){
+      return 'Error: Input must be a number';
+    }
+    if(!this.head){
+      this.head = node;
+      return this;
+    }
+    let current = this.head;
+    while(current.next){
+      current = current.next;
+    }
+    current.next = node;
+    current.next.prev = current;
+    current = current.next;
+  }
+
+  prepend(val){
+    let holdThis = this.head;
+    let node = new Node(val);
+    let verify = val/0;
+    if(!verify){
+      return 'Error: Input must be a number';
+    }
+    if(!this.head){
+      this.head = node;
+      return this;
+    }
+    this.head = node;
+    this.head.next = holdThis;
+    holdThis.prev = this.head;
+    this.head.prev = null;
+    return this;
+  }
+}
+
 class List {
 
   constructor() {
@@ -95,11 +138,6 @@ class List {
 }
 
 
-let bill = new List;
-
-let ted = [1,2,3,null];
-bill.deserialize(ted);
-console.log(bill);
 
 
 
@@ -110,3 +148,12 @@ console.log(bill);
 
 module.exports = List;
 
+let bill = new DoubleList();
+
+bill.prepend(3);
+
+bill.prepend(2);
+
+bill.prepend(1);
+// console.log(bill);
+console.log(bill.head.next);
