@@ -6,6 +6,7 @@ class Node {
     this.value = value;
     // if(!value){this.value = null;}    
     this.next = null;
+    this.prev = null;
   }
 }
 
